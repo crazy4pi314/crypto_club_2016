@@ -40,57 +40,7 @@
 				float: right;
 				width: 50%;
 			}
-/*			.fragment.visible:not(.current-fragment) {
-    			display: none;
-    			height:0px;
-    			line-height: 0px;
-    			font-size: 0px;
-			}*/
 
-			.risk thead td {
-				font-family: Lato, "sans-serif";
-			}
-
-			.risk td {
-    			border-bottom-color: #ccc !important;
-			}
-
-			.risk thead td,
-			.risk tbody td /*.risk-fail, .risk .risk-high, .risk .moderate, .risk .low */{
-				text-align: center !important;
-				width: 6em;	
-
-			}
-
-			.risk tfoot tr:first-child {
-				border-top: #ccc 1px solid;
-			}
-
-			.risk tfoot td {
-				border-bottom-width: 0px;
-				margin-top: 0.3em;
-				font-size: 75%;
-			}
-
-			.risk .fail {
-				text-align: center !important;
-				color: #CC79A7;
-			}
-
-			.risk .high {
-				text-align: center !important;
-				color: #D55E00;
-			}
-
-			.risk .mod {
-				text-align: center !important;
-				color: #F0E442;
-			}
-
-			.risk .low {
-				text-align: center !important;
-				color: #0072B2;
-			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -102,9 +52,6 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
 
 	<body>
@@ -114,21 +61,9 @@
 			<div class="slides">
 
 <!--==================================================================================-->
-				<section data-markdown>
-					Follow along at http://www.sckaiser.com/research/talks/crypto_club_2016/.
-
-					---
-
-					Control slides with ←, → and spacebar.
-					
-					Zoom in and out with shift-click.
-
-					<strong>F</strong> for full-screen.
-				</section>
-<!--==================================================================================-->
 				<section>
-					<h1 style="font-size: 175%; margin-bottom: 0;"> Photon phreaking: </h1>
-					<h3 style="font-size: 100%">What quantum can (actually) do for security</h3>
+					<h1 style="font-size: 300%; margin-bottom: 0;"> Photon phreaking: </h1>
+					<h2 style="font-size: 100%">What quantum can (actually) do for security</h2>
 					<hr />
 
 					<p>
@@ -137,29 +72,67 @@
 						<a href="http://www.sckaiser.com">Sarah Kaiser</a> <br>
 					</p>
 
-					<aside class="notes">
-        				How is breaking practical 
-    				</aside>
 				</section>
 <!--==================================================================================-->
-				<section>
-					<large>Information security is an integral part of modern society.</large>
-					<p class="fragment">Classical infrastructure is<i> already</i> horribly compromised.</p>
+				<section data-markdown>
+					<script type="text/template">
+						# Part 1:#
+						## Quantum Resorces ##
+
+					</script>	
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum resources ##
+						
+						- Qubits
+						- Superposition
+						- Entanglement
+
+						Note:
+						draw on whiteboard
+					</script>	
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 2:#
+						## Quantum meets computing ##
+
+					</script>	
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## How does this impact computing? ##
+						
+						- Registers $\rightarrow$ Qubit states
+						- Operations $\rightarrow$ Gates manipulating qubits
+						- Read-out $\rightarrow$ Measurement of probabilty distributions
+
+						Note:
+						The distributions mesured can be designed to give deterministic anwsers via interference
+					</script>	
 				</section>
 
 <!--==================================================================================-->
-				<section>
-					<div>
-						Attacks on classical key exchange will only get worse.
-						<p class="fragment" style="font-size: 75%;"> At least many people are Shor... <p>
-					</div>
+				<section data-background="/figures/the-more-you-know-test.png">
+					<h2> Common myths and misconceptions </h2>
+						<ul>
+							<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer </p>
+						    <li><p class="fragment"> Superposition does not mean "in two states at once" </p>
+							<li><p class="fragment"> Read-out $\rightarrow$ Measurement of probabilty distributions </p>
+						</ul>
+				</section>
 
-					<div class="fragment" >
-						<h2> Potentially Secure Key Exchange </h2>
-
-						<p class="fragment"> Post-quantum cryptography </p>
-						<p class="fragment" style="color: #fb3550;"> Quantum key distribution</p>
-					</div>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 3:#
+						## Quantum Technologies ##
+						
+					</script>	
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
@@ -174,49 +147,51 @@
 						Key EXPANSION protocol, relate to DH 
 					</script>	
 				</section>
-
-
-
 <!--==================================================================================-->
-				<section data-markdown>
+		
+				<section  data-markdown>
 					<script type="text/template">
-						## Quantum Key Distribution (QKD) ##
-				
-						Objective: share a secret key between Alice and Bob
-
-						<img data-src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 70%;" />
-
+						### Example QKD protocol: BB84 ###
+						<img style="width: 90%" data-src="http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg" alt="BB84 diagram">	
+						<a href="http://doi.org/bdnw">					
+								doi:10/3d6
+						</a>
 						Note:
-						Key EXPANSION protocol, relate to DH 
-					</script>	
+						Mention bob is polarization analyzer.
+						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
+					</script>
 				</section>
+
 
 <!--==================================================================================-->
 				<section>
 					<h2> Why don't we all have quantum keys? </h2>
 					<ol>
-						<li><p class="fragment"> Distance/Loss: $\approx 300$ km</p></li>
 						<li><p class="fragment"> Hardware developments </p></li> 
-						<li><p class="fragment"> Realistic device security models </p></li>
+						<li><p class="fragment"> Distance/Loss: $\approx 300$ km</p></li>
+						<li><p class="fragment"> Realistic device security models* </p></li>
 					</ol>
 					<aside class="notes">
         				Dont say rep rate
     				</aside>
 				</section>
+
 <!--==================================================================================-->
 				<section data-background-image="figures/sat-concept.png"
 				         data-background-position="bottom"
 				         data-background-size="80%">
-						<h3 style="position: relative; top: -2em;">
-							One approach: <br> QKD receiver satellite
+						<h3 style="position: relative;font-size: 120%; top: -2em;">
+							One approach to <br> overcoming loss: 
 						</h3>
+						<p style="position: relative;font-size: 120%; top: -2em;">
+							QKD receiver satellite
+						</p>
 						<!-- <img data-src="figures/sat-concept.png" alt="Reciever payload schematic"> -->
 				</section>
-
 	
 <!--==================================================================================-->
 				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
-					<h1>Security:</h1>
+					<h1 style = "font-size: 300%;">QKD Hardware Security:</h1>
 					<h3>Functionality $\neq$ security</h3>
 				</section>
 
@@ -237,28 +212,24 @@
 						LASER DAMAGE IDEA!!!!!!!!!!!
 					</script>
 				</section>
-<!--==================================================================================-->
-				<section>
-					How do we use a sledgehammer to pick a lock?
-				</section>
-
 
 
 <!--==================================================================================-->
-				<section  data-markdown data-background="#666666">
+				<section data-markdown>
 					<script type="text/template">
-						### Laser damage attack ###
-						ID Quantique Clavis<sup>2</sup> 
-						<img data-src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
-					Note:
-					say EDFA, plug and play, phase encoding.
-					</script>
+						## Laser Damage attack ##
+				
+						Objective: Blind Alices's monitoring detectors
+
+						<img data-src="figures/qkd-attack-concept.png" alt="diagram for LD attack concetp" style="width: 70%;" />
+
+					</script>	
 				</section>
 
 <!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
-						### PIN diode damage ###
+						### Monitoring diode damage ###
 						<div class="two-col-container">
 							<div class="left-col">
 								<img data-src="figures/unburnt.jpg" alt="Undamaged detector sample" >
@@ -270,16 +241,20 @@
 						<!-- - no patch that works -->
 					</script>
 				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum random number generators ##
+
+						<img data-src="figures/qrng.png" alt="diagram for basic qrng device" style="width: 70%;" />
+
+					</script>	
+				</section>
 
 <!--==================================================================================-->
-				<section data-background="figures/attackplot.png" data-background-size=60%>
-					
-						<!-- ### Attack results ### -->
-
-					<!-- 	<img data-src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%"> -->
-						<h1 class="fragment" style="font-size: 200%; background-color: #333;"> No demonstrated successful countermeasures!</h1>
-					
-				</section>
+<!-- 				<section data-background="figures/attackplot.png" data-background-size=60%>
+										
+				</section> -->
 <!--==================================================================================-->	
 				<section data-markdown >
 					<script type="text/template">
@@ -326,21 +301,17 @@
 
 
 <!--==================================================================================-->
+
 <!--==================================================================================-->
-		
-				<section  data-markdown>
+				<section  data-markdown data-background="#666666">
 					<script type="text/template">
-						### Example QKD protocol: BB84 ###
-						<img style="width: 90%" data-src="http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg" alt="BB84 diagram">	
-						<a href="http://doi.org/bdnw">					
-								doi:10/3d6
-						</a>
-						Note:
-						Mention bob is polarization analyzer.
-						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
+						### Laser damage attack ###
+						ID Quantique Clavis<sup>2</sup> 
+						<img data-src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
+					Note:
+					say EDFA, plug and play, phase encoding.
 					</script>
 				</section>
-
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
