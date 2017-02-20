@@ -143,6 +143,70 @@
 				</section>
 <!--==================================================================================-->
 				<section>
+					<large>What is Quantum Computing?</large>
+					<p class="fragment">Classical Memory: The Bit</p>
+					<p class="fragment">Quantum Memory: The Qubit</p>
+					<p class="fragment">TODO: Figures
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>If that's my memory, what operations can I perform?</large>
+					<p class="fragment">Classical Operations: Bitflip</p>
+					<p class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</p>
+					<p class="fragment">Quantum Operations: Measurement</p>
+					<p class="fragment">Measurement requires a basis!</p>
+					<p class="fragment">Measurement outcomes are non-deterministic!</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large></large>
+					<p class="fragment">Quantum Constraints</p>
+					<p class="fragment">Measurement destroys phase information, you can only measure once</p>
+					<p class="fragment">No-Cloning Theorem: Quantum states cannot be copied</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>A Pathological Example</large>
+					<p class="fragment">Suppose I give every person in this room an integer number and inquire whether the sum of the numbers is odd or even, while constraining that each person may only convey one bit of information</p>
+					<p class="fragment">Clearly this problem may be solved by picking a basis (even = 0, odd = 1), adding the bit that is conveyed to you to your number and passing the appropriate bit to the next person</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>A Pathological Example</large>
+					<p class="fragment">Suppose now I give you a non-integer, positive number and ask you to do the same thing, but using a qubit rather than a bit, I strictly specify that the sum of all the numbers in the room is an integer. (You may assume that everyone has a pre-agreed basis)</p>
+					<p class="fragment">Again we can use the basis that even = |0>, odd = |1> and store the non-integer component in the phase |\psi> = a|0> + b|1>. When given someone else's qubit you add it to yours without measuring it, then pass the new state to the next person. The final person performs the measurement and has the result. </p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>Computers need more than one (Qu)bit</large>
+					<p class="fragment">Just as classical computers have operations over more than one bit, so do quantum computers</p>
+					<p class="fragment">Operations on $n$ qubits take the form of $2^n \times 2^n$ unitary matricies</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>Entanglement</large>
+					<p class="fragment">Once we start acting on more than one qubit, we can achieve some very strange behaviour</p>
+					<p class="fragment">TODO Entanglement</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>Quantum Algorithms</large>
+					<p class="fragment">Deutch-Jozsa: Free$^{*}$ parallelism 
+					<p class="fragment">$^{*}$:Where "Free" indicates an exponential speedup if you want to solve a particular single problem, if you want other problems solved you will have to find your own algorithm
+					<p class="fragment">Grover's Algorithm: Search an unsorted list for an element$^{**}$ in $O(\sqrt(n))$, best classical is $O(n)$
+					<p class="fragment">$^{**}$: Assuming that you know the number of elements in the list that correspond to the element you are searching for, otherwise this algorithm will not work effectively
+					<p class="fragment">Shor's Algorithm: Because fourier transforms are unitary, and nobody really needed asymmetric cryptography anyway</p>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<large>Shor's Algorithm</large>
+					<p class="fragment">Solves the prime factor problem</p>
+					<p class="fragment">The classical approach: GNFS</p>
+					<p class="fragment">Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
+					<p class="fragment">Shor's algorithm: Find the period of the prime field using the quantum fourier transform, the 'square root' then gives the prime factors</p>
+				</section>
+<!--==================================================================================-->
+				<section>
 					<large>Information security is an integral part of modern society.</large>
 					<p class="fragment">Classical infrastructure is<i> already</i> horribly compromised.</p>
 				</section>
