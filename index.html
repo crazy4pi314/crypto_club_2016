@@ -82,26 +82,32 @@
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>What is Quantum Computing?</large>
+					<h2>What is Quantum Computing?</h2>
 					<p class="fragment">Classical Memory: The Bit</p>
 					<p class="fragment">Quantum Memory: The Qubit</p>
-					<p class="fragment">TODO: Figures
+					<p class="fragment">$0 \rightarrow \left|0\right\rangle$<br/>$1 \rightarrow \left|1\right\rangle$</p>
+					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>If that's my memory, what operations can I perform?</large>
-					<p class="fragment">Classical Operations: Bitflip</p>
-					<p class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</p>
-					<p class="fragment">Quantum Operations: Measurement</p>
-					<p class="fragment">Measurement requires a basis!</p>
-					<p class="fragment">Measurement outcomes are non-deterministic!</p>
+					<h3>If that's my memory, what operations can I perform?</h3>
+					<ul>
+						<li class="fragment">Classical Operations: Bitflip</li>
+						<li class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</li>
+						<li class="fragment">Quantum Operations: Measurement</li>
+					</ul>	
+					<p class="fragment"> $P(\left|0\right\rangle) = a^2$ and $P(\left|1\right\rangle) = b^2$</p>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large></large>
-					<p class="fragment">Quantum Constraints</p>
-					<p class="fragment">Measurement destroys phase information, you can only measure once</p>
-					<p class="fragment">No-Cloning Theorem: Quantum states cannot be copied</p>
+					<large>Measurement and Constraints</large>
+					<ul>
+						<li class="fragment">Measurement requires a basis</li>
+						<li class="fragment">Measurement outcomes are non-deterministic</li>
+						<li class="fragment">Non-deterministic measurements give us access to true random number generator</li>
+						<li class="fragment">Measurement destroys phase information, you can only measure once</li>
+						<li class="fragment">No-Cloning Theorem: Quantum states cannot be copied</li>
+					</ul>
 				</section>
 <!--==================================================================================-->
 				<section>
@@ -249,15 +255,12 @@
 <!--==================================================================================-->
 				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=cover>
 					<script type="text/template">
-						### QKD hardware security ###
-						- Classical and Quantum attacks:
-						  - Trojan horse
+						###  Quantum attacks: ###
 						  - Man in the middle
-						  - Site vulnerability
-						- Quantum only attacks:
 						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
-						  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
-						  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
+						  - Side channel
+							  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
+							  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
 
 						Note:
 						LASER DAMAGE IDEA!!!!!!!!!!!
