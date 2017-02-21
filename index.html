@@ -98,7 +98,7 @@
 						<li class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</li>
 						<li class="fragment">Quantum Operations: Measurement</li>
 					</ul>	
-					<p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\<l></l>eft(\left|1\right\rangle\right) = b^2$</p>
+					<p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\left(\left|1\right\rangle\right) = b^2$</p>
 				</section>
 
 <!--==================================================================================-->
@@ -107,7 +107,7 @@
 					<ul>
 						<li class="fragment">Measurement requires a basis</li>
 						<li class="fragment">Measurement outcomes are non-deterministic</li>
-						<li class="fragment">Non-deterministic measurements give us access to true random number generator</li>
+						<li class="fragment">Non-deterministic measurements give us access to true random number generation</li>
 						<li class="fragment">Measurement destroys phase information, you can only measure once</li>
 						<li class="fragment">No-Cloning Theorem: Quantum states cannot be copied</li>
 					</ul>
@@ -116,8 +116,10 @@
 <!--==================================================================================-->
 				<section>
 					<h3>Entanglement</h3>
-					<p class="fragment">Once we start acting on more than one qubit, we find some very non-classical behaviour</p>
-					<p class="fragment"></p>
+					<p class="fragment">Entanglement occurs when the state of a qubit depends on the state of another qubit</p>
+					<p class="fragment">For example, two separated qubits same state, but we do not know which state both are in without measuring
+						<br/><br/>$\left|\psi\right\rangle = \frac{\left|00\right\rangle + \left|11\right\rangle}{\sqrt{2}}$
+					</p>
 				</section>
 
 <!--==================================================================================-->
@@ -131,17 +133,14 @@
 
 <!--==================================================================================-->
 				<section>
-					<large>A Pathological Example</large>
-					<p class="fragment">Suppose I give every person in this room an integer number and inquire whether the sum of the numbers is odd or even, while constraining that each person may only convey one bit of information</p>
-					<p class="fragment">Clearly this problem may be solved by picking a basis (even = 0, odd = 1), adding the bit that is conveyed to you to your number and passing the appropriate bit to the next person</p>
-				</section>
+					<h3>A Pathological Example</h3>
+					<img data-src="figures/crypto_talk_classical.png" alt="classical pathological problem" style="width: 60%;" />
+			</section>
 
 <!--==================================================================================-->
 				<section>
-					<large>A Pathological Example</large>
-					<p class="fragment"> TODO: DIAGRAMS, sans text</p>
-					<p class="fragment">Suppose now I give you a non-integer, positive number and ask you to do the same thing, but using a qubit rather than a bit, I strictly specify that the sum of all the numbers in the room is an integer. (You may assume that everyone has a pre-agreed basis)</p>
-					<p class="fragment">Again we can use the basis that even = |0>, odd = |1> and store the non-integer component in the phase |\psi> = a|0> + b|1>. When given someone else's qubit you add it to yours without measuring it, then pass the new state to the next person. The final person performs the measurement and has the result. </p>
+					<h3>A Pathological Example</h3>
+				<img data-src="figures/crypto_talk_quantum_demo.png" alt="classical pathological problem" style="width: 90%;" />
 				</section>
 
 <!--==================================================================================-->
