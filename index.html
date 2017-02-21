@@ -86,21 +86,21 @@
 					<p class="fragment">Classical Memory: The Bit</p>
 					<p class="fragment">Quantum Memory: The Qubit</p>
 					<p class="fragment">$0 \rightarrow \left|0\right\rangle$<br/>$1 \rightarrow \left|1\right\rangle$</p>
-					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$
+					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$</p>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<h3>If that's my memory, what operations can I perform?</h3>
+					<h3>Quantum Operations</h3>
 					<ul>
 						<li class="fragment">Classical Operations: Bitflip</li>
 						<li class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</li>
 						<li class="fragment">Quantum Operations: Measurement</li>
 					</ul>	
-					<p class="fragment"> $P(\left|0\right\rangle) = a^2$ and $P(\left|1\right\rangle) = b^2$</p>
+					<p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\<l></l>eft(\left|1\right\rangle\right) = b^2$</p>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>Measurement and Constraints</large>
+					<h3>Measurement and Constraints</h3>
 					<ul>
 						<li class="fragment">Measurement requires a basis</li>
 						<li class="fragment">Measurement outcomes are non-deterministic</li>
@@ -123,31 +123,28 @@
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>Computers need more than one (Qu)bit</large>
+					<h3>Computers need more than one (Qu)bit</h3>
 					<p class="fragment">Just as classical computers have operations over more than one bit, so do quantum computers</p>
 					<p class="fragment">Operations on $n$ qubits take the form of $2^n \times 2^n$ unitary matricies</p>
 				</section>
 <!--==================================================================================-->
 				<section>
 					<large>Entanglement</large>
-					<p class="fragment">Once we start acting on more than one qubit, we can achieve some very strange behaviour</p>
+					<p class="fragment">Once we start acting on more than one qubit, we find some very non-classical behaviour</p>
 					<p class="fragment">TODO Entanglement</p>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>Quantum Algorithms</large>
+					<h3>Quantum Algorithms</h3>
 					<p class="fragment">Deutch-Jozsa: Free$^{*}$ parallelism 
-					<p class="fragment">$^{*}$:Where "Free" indicates an exponential speedup if you want to solve a particular single problem, if you want other problems solved you will have to find your own algorithm
-					<p class="fragment">Grover's Algorithm: Search an unsorted list for an element$^{**}$ in $O(\sqrt(n))$, best classical is $O(n)$
-					<p class="fragment">$^{**}$: Assuming that you know the number of elements in the list that correspond to the element you are searching for, otherwise this algorithm will not work effectively
-					<p class="fragment">Shor's Algorithm: Because fourier transforms are unitary, and nobody really needed asymmetric cryptography anyway</p>
+					<p class="fragment">Grover's Algorithm: Search an unsorted list for an$^{**}$ element in $O(\sqrt{n})$, best classical is $O(n)$
+					<p class="fragment">Shor's Algorithm: A faster prime factoring algorithm, because fourier transforms are unitary</p>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<large>Shor's Algorithm</large>
-					<p class="fragment">Solves the prime factor problem</p>
-					<p class="fragment">The classical approach: GNFS</p>
-					<p class="fragment">Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
+					<h3>Shor's Algorithm</h3>
+					<p class="fragment">Finding Prime Factors</p>
+					<p class="fragment">GNFS: Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
 					<p class="fragment">Shor's algorithm: Find the period of the prime field using the quantum fourier transform, the 'square root' then gives the prime factors</p>
 				</section>
 
