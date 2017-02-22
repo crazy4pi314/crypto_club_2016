@@ -77,56 +77,71 @@
 				<section data-markdown>
 					<script type="text/template">
 						# Part 1:#
-						## Quantum Resorces ##
+						## Quantum Resources ##
 					</script>
 				</section>
 
 <!--==================================================================================-->
 				<section>
-					<h2>What is Quantum Computing?</h2>
-					<p class="fragment">Classical Memory: The Bit</p>
+					<!-- <h2>What is Quantum Computing?</h2> -->
+<!-- 					<p class="fragment">Classical Memory: The Bit</p>
 					<p class="fragment">Quantum Memory: The Qubit</p>
 					<p class="fragment">$0 \rightarrow \left|0\right\rangle$<br/>$1 \rightarrow \left|1\right\rangle$</p>
-					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$</p>
+					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$</p> -->
+					<img data-src="figures/bit_qubit.png" alt="progression from bit to qubit" style="width: 80%;" />
 				</section>
 
 <!--==================================================================================-->
 				<section>
 					<h3>Quantum Operations</h3>
 					<ul>
-						<li class="fragment">Classical Operations: Bitflip</li>
-						<li class="fragment">Quantum Operations: Rotations about some axis (any 2 by 2 unitary matrix)</li>
-						<li class="fragment">Quantum Operations: Measurement</li>
+						<li class="fragment">Classical: Bitflip</li>
+						<li class="fragment">Quantum: Rotations about some axis <!-- <br/>(any $2 \times 2$ unitary matrix) --></li>
+						<li class="fragment">Quantum: Measurement is the overlap between the state and some basis vector</li>
 					</ul>	
-					<p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\left(\left|1\right\rangle\right) = b^2$</p>
+					<!-- <p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\left(\left|1\right\rangle\right) = b^2$</p> -->
+					<img data-src="figures/bloch.png" alt="bloch sphere" style="width: 40%;" />
 				</section>
 
 <!--==================================================================================-->
 				<section>
-					<h3>Measurement and Constraints</h3>
+					<h3>Quantum Measurement</h3>
 					<ul>
-						<li class="fragment">Measurement requires a basis</li>
-						<li class="fragment">Measurement outcomes are non-deterministic</li>
-						<li class="fragment">Non-deterministic measurements give us access to true random number generation</li>
-						<li class="fragment">Measurement destroys phase information, you can only measure once</li>
-						<li class="fragment">No-Cloning Theorem: Quantum states cannot be copied</li>
+						<li class="fragment">Requires a basis</li>
+						<li class="fragment">Outcomes are non-deterministic</li>
+						<li class="fragment">Destroys phase information, only can measure once </li>
+					</ul>
+
+					<img data-src="figures/bloch.png" alt="bloch sphere" style="width: 40%;" />
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>Quantum System Properties</h3>
+					<ul>
+						<!-- <li class="fragment">Non-deterministic measurements give us access to true random number generation</li> -->
+						<li class="fragment"><font color="fb3550">No-Cloning Theorem:</font> Quantum states cannot be copied</li>
+						<li class="fragment"><font color="fb3550">Entanglement:</font> The state of a qubit is "correlated" with the state of another qubit </li>
+						<ul>
+							<li class="fragment">You cannot describe the effect of a rotation on only one qubit in set of entangled qubits</li>
+						</ul>
 					</ul>
 				</section>
 
 <!--==================================================================================-->
-				<section>
+<!-- 				<section>
 					<h3>Entanglement</h3>
-					<p class="fragment">Entanglement occurs when the state of a qubit depends on the state of another qubit</p>
+					<p class="fragment">Entanglement occurs when </p>
 					<p class="fragment">For example, two separated qubits same state, but we do not know which state both are in without measuring
 						<br/><br/>$\left|\psi\right\rangle = \frac{\left|00\right\rangle + \left|11\right\rangle}{\sqrt{2}}$
 					</p>
-				</section>
+				</section> -->
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						# Part 2:#
-						## Quantum meets computing ##
+						## Quantum Meets Computing ##
 
 					</script>	
 				</section>
@@ -161,33 +176,18 @@
 <!--==================================================================================-->
 				<section>
 					<h3>Shor's Algorithm</h3>
-					<p class="fragment">Finding Prime Factors</p>
-					<p class="fragment">GNFS: Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
-					<p class="fragment">Shor's algorithm: Find the period of the prime field using the quantum fourier transform, the 'square root' then gives the prime factors</p>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						## How does this impact computing? ##
-						
-						- Registers $\rightarrow$ Qubit states
-						- Operations $\rightarrow$ Gates manipulating qubits
-						- Read-out $\rightarrow$ Measurement of probabilty distributions
-
-						Note:
-						The distributions mesured can be designed to give deterministic anwsers via interference
-					</script>	
+					<p class="fragment"><font color="fb3550">GNFS:</font>  Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
+					<p class="fragment"><font color="fb3550">Shor's algorithm:</font>  Find the period of the prime field using the quantum fourier transform, the 'square root' then gives the prime factors</p>
 				</section>
 
 <!--==================================================================================-->
 				<section data-background="/figures/the-more-you-know-test.png">
-					<h2> Common myths and misconceptions </h2>
+					<h2> Common Myths and Misconceptions </h2>
 						<ul>
-							<li><p class="fragment"> There is nothing "spooky" about entanglement</p>
-						    <li><p class="fragment"> Superposition does not mean "in two states at once" </p>
-							<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer </p>
-							<li><p class="fragment"> Quantum computers will not be here tomorrow. (have:100s, need: 100 million) </p>
+						    <li><p class="fragment"> Quantum computers are <strong>NOT</strong> universally faster or more powerful than classical computers</p>
+							<li><p class="fragment"> Quantum computers will <strong>NOT</strong> be here tomorrow. <br>have:100 qubits / need: 100 million </p>
+							<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer. Evidence shows quantum annealer at best </p>
+							<li><p class="fragment"> There is no one right material or system to make qubits </p>
 						
 						</ul>
 				</section>
@@ -206,9 +206,13 @@
 					<script type="text/template">
 						## Quantum Key Distribution (QKD) ##
 				
-						Objective: share a secret key between Alice and Bob
+						<font color="fb3550">Objective:</font> share a secret key between Alice and Bob
 
 						<img data-src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 70%;" />
+
+						<font color="fb3550">Proof of security:</font> solid
+
+						<font color="fb3550">Implementations:</font> getting there
 
 						Note:
 						Key EXPANSION protocol, relate to DH 
@@ -236,7 +240,7 @@
 					<ol>
 						<li><p class="fragment"> Hardware developments </p></li> 
 						<li><p class="fragment"> Distance/Loss: $\approx 300$ km</p></li>
-						<li><p class="fragment"> Realistic device security models* </p></li>
+						<li><p class="fragment"> Realistic device security models </p></li>
 					</ol>
 					<aside class="notes">
         				Dont say rep rate
@@ -318,7 +322,13 @@
 <!--==================================================================================-->	
 				<section data-markdown >
 					<script type="text/template">
-						# Thank you #
+						## Key Takeaways: ##
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">Be critical of media about quantum computers</h6>
+						    - Quantum computers are not always "better"
+						    - Need 100's of millions of qubits to implement Shor
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">QKD tech still needs hardening </h6>
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">No such thing as "quantum safe"</h6>
+						    - Just because it hasn’t been broken with any of the grand total of three algorithms doesn’t make it secure
 					</script>
 				</section>
 
@@ -373,6 +383,46 @@
 				</section>
 
 <!--==================================================================================-->
+				<section >	
+					<h3>Commercial QKD devices</h3>
+					<div class="two-col-container">
+						<div class="left-col">
+							<ul>
+								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
+								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
+							</ul>
+						</div>	
+						<div class="right-col">
+							<ul>
+								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
+								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
+							</ul>
+						</div>
+					</div>
+				
+					<img data-src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+				
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Fiber fuse ###
+						<img data-src="figures/dmg-fiberfuse.png" alt="fiber fuse sample 1">
+						<img data-src="figures/dmg-fiberfuse-fusion-gap.png" alt="fiber fuse sample 2">
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown data-background-video="figures/fiber-fuse-crop-nosound.mp4" >
+					<script type="text/template">
+						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
+						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Free-space QKD losses ###
@@ -399,15 +449,6 @@
 
 						Note:
 						Dark count rates->QBER
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section  data-markdown data-background="#666666">
-					<script type="text/template">
-						### Component damage ###
-						<img data-src="figures/dmg-pin-setup.png" alt="Setup diagram for comp damage">
-						
 					</script>
 				</section>
 
@@ -466,14 +507,6 @@
 				</section>
 
 <!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Fiber fuse ###
-						<img data-src="figures/dmg-fiberfuse.png" alt="fiber fuse sample 1">
-						<img data-src="figures/dmg-fiberfuse-fusion-gap.png" alt="fiber fuse sample 2">
-					</script>
-				</section>
-
 
 
 			</div>
@@ -521,94 +554,6 @@
 
 	</body>
 </html>
-<!--==================================================================================-->
-<!-- 				
-==================================================================================
-				<section  data-markdown>
-					<script type="text/template">
-						### Example QKD protocol: BB84 ###
-						#### Classical phase ####
-						<div class="two-col-container">
-							<div class="left-col" style="width: 60%">
-								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
-						
-								[doi:10/3d6](http://doi.org/3d6)
-							</div>
-							<div class="right-col" style="width: 40%">
-								<ol>
-									<li>Share basis choices</li>
-									<li>Error correction</li>
-									<li>Privacy amplification</li>
-									<li>Final key produced</li>
-								</ol>
 
-							</div>
-						</div>
-					</script>
-				</section> -->
-<!--==================================================================================-->
-<!--				<section  data-markdown data-background="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" data-background-size="500px">
-					<script type="text/template">
-						### Commercial QKD devices ###
-						<p>
-							<ul>
-								<li>id Quantique</li>
-								<li>Quintencence</li>
-								<li>MagiQ</li>
-								<li>SequreNet</li>
-							</ul>
-						</p>
-					</script>
-				</section>-->
-<!--==================================================================================-->
-<!-- 				<section  data-markdown>
-					<script type="text/template">
-						## Challenges for practical QKD ##
-						- Distance/Loss 
-						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg) 
-						   
-						- Realistic device security models 
-						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp) 
-					</script>
-				</section> -->
-<!--==================================================================================-->
-<!-- 				<section >	
-					<h3>Commercial QKD devices</h3>
-					<div class="two-col-container">
-						<div class="left-col">
-							<ul>
-								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
-								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
-							</ul>
-						</div>	
-						<div class="right-col">
-							<ul>
-								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
-								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
-							</ul>
-						</div>
-					</div>
-				
-					<img data-src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
-				
-				</section> -->
-<!--==================================================================================-->
-<!-- 				<section data-markdown data-background-video="figures/fiber-fuse-crop-nosound.mp4" >
-					<script type="text/template">
-						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
-						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
 
-					</script>
-				</section> -->
-<!-- 
-				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
-					<script type="text/template">
-						### Functionality `$\neq$` Security ###
 
-						- Classical:
-						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
-						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
-						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
-						
-					</script>
-				</section> -->
